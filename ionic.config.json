@@ -1,5 +1,7 @@
 {
   "name": "find-me-ft",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

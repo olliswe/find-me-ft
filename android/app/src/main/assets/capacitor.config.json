@@ -1,0 +1,8 @@
+{
+  "appId": "com.fcc.fmf",
+  "appName": "FindMeFreetown",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "linuxAndroidStudioPath": "/home/oliver/android-studio/bin/studio.sh"
+}
