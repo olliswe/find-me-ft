@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.ionic.starter">
+    package="com.fcc.fmf">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="FindMeFreetown"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/fcc_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/fcc_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:name="com.fcc.fmf.MainActivity"
-            android:label="FindMeFreetown"
+            android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">
 

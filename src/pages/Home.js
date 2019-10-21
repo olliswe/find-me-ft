@@ -82,6 +82,7 @@ const handleGetLocation = () => {
   const [currentWard, setCurrentWard]=useState({ward:null, source:null})
   const [showWasteResult, setShowWasteResult]=useState(false)
   const [wasteProviders, setWasteProviders]=useState({loading:false, data:true, ward:null})
+  const [networkStatus, setNetworkState]=useState({connected:true})
 
   const handleSelectWard = (event) => {
     setDropDownWard(event.target.value)
@@ -146,6 +147,17 @@ const handleGetLocation = () => {
   }, [currentWard])
 
 
+  const { Network } = Plugins;
+
+  let handler = Network.addListener('networkStatusChange', (status) => {
+    setNetworkState(status)
+  });
+  // To stop listening:
+  // handler.remove();
+
+
+
+
 
   return (
     <IonPage>
@@ -165,7 +177,12 @@ const handleGetLocation = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-
+        {!networkStatus.connected &&
+      <IonCard className='ion-padding' color='danger'>
+        <p className='ion-text-center'>Sorry, you don't seem to be connected to the internet.</p>
+        <p className='ion-text-center'>Please connect to a network to ensure the app works properly!</p>
+      </IonCard>
+        }
       <IonCard className="ion-padding"> 
           <h2 className='ion-text-center'>Welcome Freetonian</h2>
           <p className='ion-text-center'>
